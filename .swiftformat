@@ -1,0 +1,6 @@
+--swiftversion 5.7
+--header "\nSchoolStore\nCopyright © {created.year} Vladislav Zhivaev. All rights reserved.\n//"
+--maxwidth 120
+--wraparguments before-first
+--wrapcollections before-first
+--enable organizeDeclarations, markTypes

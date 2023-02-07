@@ -1,11 +1,11 @@
 //
-//  ContentView.swift
-//  SchoolStore
-//
-//  Created by Headdds and hands on 07.02.2023.
+// SchoolStore
+// Copyright © 2023 Vladislav Zhivaev. All rights reserved.
 //
 
 import SwiftUI
+
+// MARK: - ContentView
 
 struct ContentView: View {
     var body: some View {
@@ -13,11 +13,13 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text(L10n.helloWorld)
         }
         .padding()
     }
 }
+
+// MARK: - ContentView_Previews
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

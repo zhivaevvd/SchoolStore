@@ -9,7 +9,8 @@ import SwiftUI
 struct SchoolStoreApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RouterView()
+                .preferredColorScheme(.light)
         }
     }
 }

@@ -9,13 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text(L10n.helloWorld)
-        }
-        .padding()
+//        if appState.accessToken == nil {
+//            ViewFactory.buildAuthView(appState: appState)
+//        } else {
+//            ViewFactory.buildTabBar()
+//        }
+        Text("")
     }
 }
 

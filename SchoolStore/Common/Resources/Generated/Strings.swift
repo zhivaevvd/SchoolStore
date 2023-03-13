@@ -15,11 +15,17 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum L10n {
-    /// Localizable.strings
-    ///   SchoolStore
-    ///
-    ///   Created by Headdds and hands on 07.02.2023.
-    public static let helloWorld = L10n.tr("Localizable", "helloWorld", fallback: "Привет мир")
+    public enum Auth {
+        /// Войти
+        public static let action = L10n.tr("Localizable", "auth.action", fallback: "Войти")
+        /// Localizable.strings
+        ///   SchoolStore
+        ///
+        ///   Created by Headdds and hands on 07.02.2023.
+        public static let login = L10n.tr("Localizable", "auth.login", fallback: "Логин")
+        /// Пароль
+        public static let password = L10n.tr("Localizable", "auth.password", fallback: "Пароль")
+    }
 }
 
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

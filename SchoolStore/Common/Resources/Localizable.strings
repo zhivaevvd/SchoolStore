@@ -7,4 +7,6 @@
 */
 
 
-"helloWorld" = "Привет мир";
+"auth.login" = "Логин";
+"auth.password" = "Пароль";
+"auth.action" = "Войти";

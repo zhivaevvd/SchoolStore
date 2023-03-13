@@ -10,40 +10,64 @@ import Foundation
 
 public final class AuthVM: ObservableObject {
     // MARK: Lifecycle
-
+    
     public init(router: Router, appState: AppState) {
         self.router = router
         self.appState = appState
-        validateFields()
     }
-
+    
     // MARK: Public
-
+    
     @Published public var login: String = ""
-
+    
     @Published public var password: String = ""
-
+    
     @Published public var isAuthButtonActive: Bool = false
-
+    
     @Published public var isLoading: Bool = false
-
+    
+    @Published public var loginError: String?
+    
+    @Published public var passwordError: String?
+    
     public func authDidTap() {
-        router.push(.tabBar)
+        guard validateFields() else { return }
+        auth { [weak self] in
+            self?.appState.person = Person.mock
+            self?.router.push(.tabBar)
+        }
     }
-
+    
     // MARK: Private
-
+    
     private let router: Router
-
+    
     private let appState: AppState
-
+    
     private var subscriptions = Set<AnyCancellable>()
-
-    private func validateFields() {
-        Publishers.CombineLatest($login, $password).map { login, password in
-            login.isEmpty && password.isEmpty
-        }.sink { [weak self] isEmpty in
-            self?.isAuthButtonActive = !isEmpty
-        }.store(in: &subscriptions)
+    
+    private func validateFields() -> Bool {
+        let isFieldsValid = !login.isEmpty && !password.isEmpty && password.count > 5
+        
+        loginError = login.isEmpty ? L10n.FieldError.empty : nil
+        
+        if password.isEmpty {
+            passwordError = L10n.FieldError.empty
+        } else if password.count < 5 {
+            passwordError = L10n.FieldError.count
+        } else {
+            passwordError = nil
+        }
+        
+        return isFieldsValid
+    }
+    
+    private func auth(_ completion: (() -> Void)? = nil) {
+        if login == AuthData.mock.login, password == AuthData.mock.password {
+            passwordError = nil
+            completion?()
+        } else {
+            passwordError = L10n.FieldError.wrongLoginOrPassword
+        }
     }
 }

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C23A977529BF2DC20055B8C8 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A977429BF2DC20055B8C8 /* RoundedCorners.swift */; };
+		C23A977729BF35EE0055B8C8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A977629BF35EE0055B8C8 /* Person.swift */; };
+		C23A977929BF40CF0055B8C8 /* AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A977829BF40CF0055B8C8 /* AuthData.swift */; };
 		C2B07B4D2992696D00ADF7B3 /* SchoolStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B07B4C2992696D00ADF7B3 /* SchoolStoreApp.swift */; };
-		C2B07B4F2992696D00ADF7B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B07B4E2992696D00ADF7B3 /* ContentView.swift */; };
 		C2B07B512992696E00ADF7B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2B07B502992696E00ADF7B3 /* Assets.xcassets */; };
 		C2B07B542992696E00ADF7B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2B07B532992696E00ADF7B3 /* Preview Assets.xcassets */; };
 		C2B07B63299272DD00ADF7B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2B07B62299272DD00ADF7B3 /* Localizable.strings */; };
@@ -28,9 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C23A977429BF2DC20055B8C8 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		C23A977629BF35EE0055B8C8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		C23A977829BF40CF0055B8C8 /* AuthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthData.swift; sourceTree = "<group>"; };
 		C2B07B492992696D00ADF7B3 /* SchoolStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B07B4C2992696D00ADF7B3 /* SchoolStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolStoreApp.swift; sourceTree = "<group>"; };
-		C2B07B4E2992696D00ADF7B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C2B07B502992696E00ADF7B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2B07B532992696E00ADF7B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C2B07B62299272DD00ADF7B3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -60,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C23A977329BF2D880055B8C8 /* RoundedCorners */ = {
+			isa = PBXGroup;
+			children = (
+				C23A977429BF2DC20055B8C8 /* RoundedCorners.swift */,
+			);
+			path = RoundedCorners;
+			sourceTree = "<group>";
+		};
 		C2B07B402992696D00ADF7B3 = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +113,6 @@
 			children = (
 				C2EA5DD12993981B00019A5D /*  Router */,
 				C2B07B732992896D00ADF7B3 /* TabBar */,
-				C2B07B4E2992696D00ADF7B3 /* ContentView.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -137,6 +148,8 @@
 		C2B07B602992712900ADF7B3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C23A977629BF35EE0055B8C8 /* Person.swift */,
+				C23A977829BF40CF0055B8C8 /* AuthData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +176,7 @@
 		C2B07B6A2992757700ADF7B3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C23A977329BF2D880055B8C8 /* RoundedCorners */,
 				C2EA5DDF2993D99300019A5D /* InputFields */,
 				C2B07B7629928AF100ADF7B3 /* Snacker */,
 			);
@@ -318,7 +332,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2B07B75299289BA00ADF7B3 /* TabBar.swift in Sources */,
-				C2B07B4F2992696D00ADF7B3 /* ContentView.swift in Sources */,
 				C2B07B6D29927AAC00ADF7B3 /* AuthView.swift in Sources */,
 				C2EA5DD5299398A100019A5D /* Router.swift in Sources */,
 				C2B07B79299296E200ADF7B3 /* AimatableFontModifier.swift in Sources */,
@@ -329,7 +342,10 @@
 				C2B07B66299274E200ADF7B3 /* Assets.swift in Sources */,
 				C2EA5DD32993983400019A5D /* Routes.swift in Sources */,
 				C2F47CCB299418280055DD97 /* PasswordField.swift in Sources */,
+				C23A977529BF2DC20055B8C8 /* RoundedCorners.swift in Sources */,
 				C2B07B6F29927B5400ADF7B3 /* AuthVM.swift in Sources */,
+				C23A977729BF35EE0055B8C8 /* Person.swift in Sources */,
+				C23A977929BF40CF0055B8C8 /* AuthData.swift in Sources */,
 				C2F47CC9299417300055DD97 /* EmailFieldView.swift in Sources */,
 				C2B07B4D2992696D00ADF7B3 /* SchoolStoreApp.swift in Sources */,
 			);

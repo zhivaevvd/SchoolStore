@@ -7,4 +7,5 @@ import Foundation
 
 public final class AppState: ObservableObject {
     @Published public var accessToken: String?
+    @Published public var person: Person?
 }

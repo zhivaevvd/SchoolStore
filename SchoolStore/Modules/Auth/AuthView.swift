@@ -17,28 +17,30 @@ public struct AuthView: View {
     // MARK: Public
 
     public var body: some View {
-        VStack(alignment: .leading, spacing: 32) {
-            Text(L10n.Auth.action)
-                .font(.largeTitle)
-                .onTapGesture {
-                    vm.authDidTap()
-                }
+        VStack {
+            VStack(alignment: .leading, spacing: 32) {
+                Text(L10n.Auth.action)
+                    .font(.largeTitle)
+                    .onTapGesture {
+                        vm.authDidTap()
+                    }
 
-            emailField
-            passwordField
+                emailField
+                passwordField
+            }
+            .padding(.horizontal, 16)
+            .padding(.top, 108)
+            .background(
+                Rectangle()
+                    .fill(Asset.white.swiftUIColor)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .onTapGesture {
+                        focusedField = nil
+                    }
+            )
 
-            Spacer()
+            authButton
         }
-        .padding(.horizontal, 16)
-        .padding(.top, 108)
-        .background(
-            Rectangle()
-                .fill(Asset.white.swiftUIColor)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .onTapGesture {
-                    focusedField = nil
-                }
-        )
     }
 
     // MARK: Private
@@ -52,13 +54,29 @@ public struct AuthView: View {
     @FocusState private var focusedField: Field?
 
     private var emailField: some View {
-        EmailFieldView(placeholder: L10n.Auth.login, text: $vm.login)
+        EmailFieldView(placeholder: L10n.Auth.login, text: $vm.login, error: $vm.loginError)
             .focused($focusedField, equals: .email)
     }
 
     private var passwordField: some View {
-        PasswordField(placeholder: L10n.Auth.password, text: $vm.password)
+        PasswordField(placeholder: L10n.Auth.password, text: $vm.password, error: $vm.passwordError)
             .focused($focusedField, equals: .password)
+    }
+
+    private var authButton: some View {
+        Button {
+            vm.authDidTap()
+        } label: {
+            Text(L10n.Auth.action.uppercased())
+                .font(.title3.bold())
+                .foregroundColor(Asset.white.swiftUIColor)
+                .background(
+                    RoundedRectangle(cornerRadius: 8, style: .continuous)
+                        .foregroundColor(Asset.navBlue.swiftUIColor)
+                        .frame(width: 328, height: 48)
+                )
+        }
+        .padding(.bottom, 24)
     }
 }
 

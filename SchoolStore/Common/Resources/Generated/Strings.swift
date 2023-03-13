@@ -26,6 +26,19 @@ public enum L10n {
         /// Пароль
         public static let password = L10n.tr("Localizable", "auth.password", fallback: "Пароль")
     }
+
+    public enum FieldError {
+        /// Минимум 5 символов
+        public static let count = L10n.tr("Localizable", "fieldError.count", fallback: "Минимум 5 символов")
+        /// Пустое поле
+        public static let empty = L10n.tr("Localizable", "fieldError.empty", fallback: "Пустое поле")
+        /// Неверный логин или пароль
+        public static let wrongLoginOrPassword = L10n.tr(
+            "Localizable",
+            "fieldError.wrongLoginOrPassword",
+            fallback: "Неверный логин или пароль"
+        )
+    }
 }
 
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

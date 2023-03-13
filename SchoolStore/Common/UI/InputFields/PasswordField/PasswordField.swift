@@ -10,9 +10,10 @@ import SwiftUI
 public struct PasswordField: View {
     // MARK: Lifecycle
 
-    public init(placeholder: String, text: Binding<String>) {
+    public init(placeholder: String, text: Binding<String>, error: Binding<String?>) {
         self.placeholder = placeholder
         _text = text
+        _error = error
     }
 
     // MARK: Public
@@ -31,8 +32,7 @@ public struct PasswordField: View {
                         .offset(x: 16, y: (isSecureFocused || !text.isEmpty) ? 6 : 0)
                         .frame(height: 54)
                         .background(
-                            RoundedRectangle(cornerRadius: 8, style: .continuous)
-                                .fill(Asset.fieldBacground.swiftUIColor)
+                            RoundedCorners(tl: 8, tr: 8)
                         )
                         .overlay(alignment: .topLeading) {
                             Text(placeholder)
@@ -42,7 +42,7 @@ public struct PasswordField: View {
                                 .opacity((isSecureFocused || !text.isEmpty) ? 1 : 0)
                         }
                 } else {
-                    EmailFieldView(placeholder: placeholder, text: $text)
+                    EmailFieldView(placeholder: placeholder, text: $text, error: $error)
                         .focused($isPlainFocused)
                 }
 
@@ -61,6 +61,7 @@ public struct PasswordField: View {
 
     private var placeholder: String
     @Binding private var text: String
+    @Binding private var error: String?
     @State private var isSecured: Bool = true
     @FocusState private var isSecureFocused: Bool
     @FocusState private var isPlainFocused: Bool
@@ -70,6 +71,6 @@ public struct PasswordField: View {
 
 struct PasswordField_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordField(placeholder: "Password", text: .constant("password"))
+        PasswordField(placeholder: "Password", text: .constant("password"), error: .constant("pass error"))
     }
 }

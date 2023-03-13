@@ -22,9 +22,6 @@
 		C2EA5DD32993983400019A5D /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DD22993983400019A5D /* Routes.swift */; };
 		C2EA5DD5299398A100019A5D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DD4299398A100019A5D /* Router.swift */; };
 		C2EA5DD72993A2EE00019A5D /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DD62993A2EE00019A5D /* RouterView.swift */; };
-		C2EA5DE12993D9B200019A5D /* SimpleInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DE02993D9B200019A5D /* SimpleInputField.swift */; };
-		C2EA5DE32993DAEB00019A5D /* SimpleInputFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DE22993DAEB00019A5D /* SimpleInputFieldType.swift */; };
-		C2EA5DE52993DB1400019A5D /* SimpleInputFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DE42993DB1400019A5D /* SimpleInputFieldStyle.swift */; };
 		C2EA5DE92993EA2A00019A5D /* InputIconModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DE82993EA2A00019A5D /* InputIconModifier.swift */; };
 		C2F47CC9299417300055DD97 /* EmailFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F47CC8299417300055DD97 /* EmailFieldView.swift */; };
 		C2F47CCB299418280055DD97 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F47CCA299418280055DD97 /* PasswordField.swift */; };
@@ -47,9 +44,6 @@
 		C2EA5DD22993983400019A5D /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		C2EA5DD4299398A100019A5D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C2EA5DD62993A2EE00019A5D /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
-		C2EA5DE02993D9B200019A5D /* SimpleInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInputField.swift; sourceTree = "<group>"; };
-		C2EA5DE22993DAEB00019A5D /* SimpleInputFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInputFieldType.swift; sourceTree = "<group>"; };
-		C2EA5DE42993DB1400019A5D /* SimpleInputFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInputFieldStyle.swift; sourceTree = "<group>"; };
 		C2EA5DE82993EA2A00019A5D /* InputIconModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIconModifier.swift; sourceTree = "<group>"; };
 		C2F47CC8299417300055DD97 /* EmailFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFieldView.swift; sourceTree = "<group>"; };
 		C2F47CCA299418280055DD97 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
@@ -231,9 +225,6 @@
 			children = (
 				C2F47CC7299417140055DD97 /* PasswordField */,
 				C2F47CC6299417040055DD97 /* EmailField */,
-				C2EA5DE02993D9B200019A5D /* SimpleInputField.swift */,
-				C2EA5DE22993DAEB00019A5D /* SimpleInputFieldType.swift */,
-				C2EA5DE42993DB1400019A5D /* SimpleInputFieldStyle.swift */,
 			);
 			path = InputFields;
 			sourceTree = "<group>";
@@ -327,11 +318,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2B07B75299289BA00ADF7B3 /* TabBar.swift in Sources */,
-				C2EA5DE12993D9B200019A5D /* SimpleInputField.swift in Sources */,
 				C2B07B4F2992696D00ADF7B3 /* ContentView.swift in Sources */,
 				C2B07B6D29927AAC00ADF7B3 /* AuthView.swift in Sources */,
 				C2EA5DD5299398A100019A5D /* Router.swift in Sources */,
-				C2EA5DE52993DB1400019A5D /* SimpleInputFieldStyle.swift in Sources */,
 				C2B07B79299296E200ADF7B3 /* AimatableFontModifier.swift in Sources */,
 				C2B07B7229927CD000ADF7B3 /* AppState.swift in Sources */,
 				C2B07B68299274EB00ADF7B3 /* Strings.swift in Sources */,
@@ -343,7 +332,6 @@
 				C2B07B6F29927B5400ADF7B3 /* AuthVM.swift in Sources */,
 				C2F47CC9299417300055DD97 /* EmailFieldView.swift in Sources */,
 				C2B07B4D2992696D00ADF7B3 /* SchoolStoreApp.swift in Sources */,
-				C2EA5DE32993DAEB00019A5D /* SimpleInputFieldType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

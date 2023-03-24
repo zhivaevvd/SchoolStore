@@ -5,7 +5,7 @@
 
 import Foundation
 
-public struct Person {
+public struct Person: Codable {
     // MARK: Lifecycle
 
     public init(id: String, name: String) {

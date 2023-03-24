@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "alertmessage?ref=iosexample.com",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/danielkmarks23/AlertMessage?ref=iosexample.com",
+      "state" : {
+        "revision" : "2b18c14a8420020d869e3efb3fe0dca13a5507b6",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

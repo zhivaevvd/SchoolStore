@@ -13,13 +13,15 @@ struct TabBar: View {
     var body: some View {
         Text("title")
             .onTapGesture {
-                router.popToRoot()
+                appState.accessToken = nil
+                router.setRoot(route: .auth, appState: appState)
             }
     }
 
     // MARK: Private
 
     @EnvironmentObject private var router: Router
+    @EnvironmentObject private var appState: AppState
 }
 
 // MARK: - TabBar_Previews

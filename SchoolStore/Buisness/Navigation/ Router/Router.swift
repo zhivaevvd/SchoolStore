@@ -10,7 +10,6 @@ public final class Router: ObservableObject {
     @Published public var route: Route?
     @Published public var sheet: Route?
     @Published public var fullScreenSheet: Route?
-    @Published public var root: Route?
 
     public func push(_ route: Route) {
         path.append(route)
@@ -38,6 +37,13 @@ public final class Router: ObservableObject {
         } else {
             fullScreenSheet = nil
         }
+    }
+    
+    public func setRoot(route: Route, appState: AppState) {
+        path = NavigationPath()
+        let window = UIApplication.shared.connectedScenes.flatMap { ($0 as? UIWindowScene)?.windows ?? [] }.first(where: { $0.isKeyWindow })
+        window?.rootViewController = UIHostingController(rootView: build(route: route, appState: appState))
+        window?.makeKeyAndVisible()
     }
 
     @ViewBuilder

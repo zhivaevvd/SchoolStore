@@ -30,10 +30,15 @@ public final class AuthVM: ObservableObject {
     
     @Published public var passwordError: String?
     
+    @Published public var showSnackBar: Bool = false
+    
+    public var snackText: String = ""
+    
     public func authDidTap() {
         guard validateFields() else { return }
         auth { [weak self] in
             self?.appState.person = Person.mock
+            self?.appState.accessToken = "accessToken"
             self?.router.push(.tabBar)
         }
     }
@@ -65,9 +70,21 @@ public final class AuthVM: ObservableObject {
     private func auth(_ completion: (() -> Void)? = nil) {
         if login == AuthData.mock.login, password == AuthData.mock.password {
             passwordError = nil
+            hideSnackBar()
             completion?()
         } else {
             passwordError = L10n.FieldError.wrongLoginOrPassword
+            showSnackBar(text: L10n.Auth.uncorrectLoginOrPassword)
         }
+    }
+    
+    private func showSnackBar(text: String) {
+        showSnackBar = true
+        snackText = text
+    }
+    
+    private func hideSnackBar() {
+        showSnackBar = false
+        snackText = ""
     }
 }

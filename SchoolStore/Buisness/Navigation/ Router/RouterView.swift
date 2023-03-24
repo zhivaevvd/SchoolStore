@@ -12,7 +12,7 @@ struct RouterView: View {
 
     var body: some View {
         NavigationStack(path: $router.path) {
-            router.build(route: router.root == nil ? .auth : .tabBar, appState: appState)
+            router.build(route: appState.accessToken == nil ? .auth : .tabBar, appState: appState)
                 .navigationDestination(for: Route.self) { route in
                     router.build(route: route, appState: appState)
                 }
@@ -30,7 +30,7 @@ struct RouterView: View {
     // MARK: Private
 
     @StateObject private var router = Router()
-    @StateObject private var appState = AppState()
+    private var appState = AppState()
 }
 
 // MARK: - RouterView_Previews

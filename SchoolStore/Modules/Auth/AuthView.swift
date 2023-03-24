@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import AlertMessage
 
 // MARK: - AuthView
 
@@ -40,6 +41,16 @@ public struct AuthView: View {
             )
 
             authButton
+        }
+        .alertMessage(isPresented: $vm.showSnackBar, type: .banner, autoHideIn: 3.0, dragToDismiss: true) {
+            HStack {
+                Text(vm.snackText)
+                     .foregroundColor(.white)
+                     .padding(16)
+                        
+                Spacer()
+             }
+              .background(Color.red)
         }
     }
 

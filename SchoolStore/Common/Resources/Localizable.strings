@@ -10,6 +10,7 @@
 "auth.login" = "Логин";
 "auth.password" = "Пароль";
 "auth.action" = "Войти";
+"auth.uncorrectLoginOrPassword" = "Неверный логин или пароль";
 
 "fieldError.empty" = "Пустое поле";
 "fieldError.count" = "Минимум 5 символов";

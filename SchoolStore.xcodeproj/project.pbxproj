@@ -21,6 +21,7 @@
 		C2B07B7229927CD000ADF7B3 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B07B7129927CD000ADF7B3 /* AppState.swift */; };
 		C2B07B75299289BA00ADF7B3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B07B74299289BA00ADF7B3 /* TabBar.swift */; };
 		C2B07B79299296E200ADF7B3 /* AimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B07B78299296E200ADF7B3 /* AimatableFontModifier.swift */; };
+		C2BABB1929CD9A1B00A7AC2B /* AlertMessage in Frameworks */ = {isa = PBXBuildFile; productRef = C2BABB1829CD9A1B00A7AC2B /* AlertMessage */; };
 		C2EA5DD32993983400019A5D /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DD22993983400019A5D /* Routes.swift */; };
 		C2EA5DD5299398A100019A5D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DD4299398A100019A5D /* Router.swift */; };
 		C2EA5DD72993A2EE00019A5D /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DD62993A2EE00019A5D /* RouterView.swift */; };
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2BABB1929CD9A1B00A7AC2B /* AlertMessage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +180,6 @@
 			children = (
 				C23A977329BF2D880055B8C8 /* RoundedCorners */,
 				C2EA5DDF2993D99300019A5D /* InputFields */,
-				C2B07B7629928AF100ADF7B3 /* Snacker */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -206,13 +207,6 @@
 				C2B07B74299289BA00ADF7B3 /* TabBar.swift */,
 			);
 			path = TabBar;
-			sourceTree = "<group>";
-		};
-		C2B07B7629928AF100ADF7B3 /* Snacker */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Snacker;
 			sourceTree = "<group>";
 		};
 		C2B07B77299296C700ADF7B3 /* Modifiers */ = {
@@ -275,6 +269,9 @@
 			dependencies = (
 			);
 			name = SchoolStore;
+			packageProductDependencies = (
+				C2BABB1829CD9A1B00A7AC2B /* AlertMessage */,
+			);
 			productName = SchoolStore;
 			productReference = C2B07B492992696D00ADF7B3 /* SchoolStore.app */;
 			productType = "com.apple.product-type.application";
@@ -304,6 +301,9 @@
 				ru,
 			);
 			mainGroup = C2B07B402992696D00ADF7B3;
+			packageReferences = (
+				C2BABB1729CD9A1B00A7AC2B /* XCRemoteSwiftPackageReference "AlertMessage" */,
+			);
 			productRefGroup = C2B07B4A2992696D00ADF7B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -546,6 +546,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C2BABB1729CD9A1B00A7AC2B /* XCRemoteSwiftPackageReference "AlertMessage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielkmarks23/AlertMessage?ref=iosexample.com";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C2BABB1829CD9A1B00A7AC2B /* AlertMessage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2BABB1729CD9A1B00A7AC2B /* XCRemoteSwiftPackageReference "AlertMessage" */;
+			productName = AlertMessage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C2B07B412992696D00ADF7B3 /* Project object */;
 }

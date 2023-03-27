@@ -6,7 +6,7 @@
 import Foundation
 
 public struct AuthData {
-    public static let mock = AuthData(login: "mass2014@yandex.ru", password: "opaopa21")
+    public static let mock = AuthData(login: "1111", password: "111111")
 
     public let login: String
     public let password: String

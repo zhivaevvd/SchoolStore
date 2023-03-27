@@ -40,12 +40,13 @@ public final class AuthVM: ObservableObject {
         isLoading = true
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
-            self?.isLoading = false
+            guard let self = self else { return }
+            self.isLoading = false
 
-            self?.auth {
-                self?.appState.person = Person.mock
-                self?.appState.accessToken = "accessToken"
-                self?.router.push(.tabBar)
+            self.auth {
+                self.appState.person = Person.mock
+                self.appState.accessToken = "accessToken"
+                self.router.setRoot(route: .tabBar, appState: self.appState)
             }
         }
     }

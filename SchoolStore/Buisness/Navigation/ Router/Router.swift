@@ -38,10 +38,11 @@ public final class Router: ObservableObject {
             fullScreenSheet = nil
         }
     }
-    
+
     public func setRoot(route: Route, appState: AppState) {
         path = NavigationPath()
-        let window = UIApplication.shared.connectedScenes.flatMap { ($0 as? UIWindowScene)?.windows ?? [] }.first(where: { $0.isKeyWindow })
+        let window = UIApplication.shared.connectedScenes.flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+            .first(where: { $0.isKeyWindow })
         window?.rootViewController = UIHostingController(rootView: build(route: route, appState: appState))
         window?.makeKeyAndVisible()
     }

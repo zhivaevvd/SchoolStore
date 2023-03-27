@@ -3,8 +3,8 @@
 // Copyright © 2023 Vladislav Zhivaev. All rights reserved.
 //
 
-import SwiftUI
 import AlertMessage
+import SwiftUI
 
 // MARK: - AuthView
 
@@ -40,17 +40,27 @@ public struct AuthView: View {
                     }
             )
 
-            authButton
+            LoadableButton(
+                style: LoadableButtonStyles.blue46(
+                    title: L10n.Auth.action.uppercased(),
+                    isLoading: $vm.isLoading,
+                    action: {
+                        vm.authDidTap()
+                    }
+                )
+            )
+            .padding([.leading, .trailing], 16)
+            .padding(.bottom, 24)
         }
         .alertMessage(isPresented: $vm.showSnackBar, type: .banner, autoHideIn: 3.0, dragToDismiss: true) {
             HStack {
                 Text(vm.snackText)
-                     .foregroundColor(.white)
-                     .padding(16)
-                        
+                    .foregroundColor(.white)
+                    .padding(16)
+
                 Spacer()
-             }
-              .background(Color.red)
+            }
+            .background(Color.red)
         }
     }
 
@@ -72,22 +82,6 @@ public struct AuthView: View {
     private var passwordField: some View {
         PasswordField(placeholder: L10n.Auth.password, text: $vm.password, error: $vm.passwordError)
             .focused($focusedField, equals: .password)
-    }
-
-    private var authButton: some View {
-        Button {
-            vm.authDidTap()
-        } label: {
-            Text(L10n.Auth.action.uppercased())
-                .font(.title3.bold())
-                .foregroundColor(Asset.white.swiftUIColor)
-                .background(
-                    RoundedRectangle(cornerRadius: 8, style: .continuous)
-                        .foregroundColor(Asset.navBlue.swiftUIColor)
-                        .frame(width: 328, height: 48)
-                )
-        }
-        .padding(.bottom, 24)
     }
 }
 

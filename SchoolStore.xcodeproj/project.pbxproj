@@ -28,6 +28,10 @@
 		C2EA5DE92993EA2A00019A5D /* InputIconModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DE82993EA2A00019A5D /* InputIconModifier.swift */; };
 		C2F47CC9299417300055DD97 /* EmailFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F47CC8299417300055DD97 /* EmailFieldView.swift */; };
 		C2F47CCB299418280055DD97 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F47CCA299418280055DD97 /* PasswordField.swift */; };
+		C2F882A229D191140062D2A7 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F882A129D191140062D2A7 /* Loadable.swift */; };
+		C2F882A529D191730062D2A7 /* LoadableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F882A429D191730062D2A7 /* LoadableButton.swift */; };
+		C2F882A929D19B0D0062D2A7 /* LoadableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F882A829D19B0D0062D2A7 /* LoadableButtonStyle.swift */; };
+		C2F882AB29D19C640062D2A7 /* LoadableButtonStyle+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F882AA29D19C640062D2A7 /* LoadableButtonStyle+Default.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		C2EA5DE82993EA2A00019A5D /* InputIconModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIconModifier.swift; sourceTree = "<group>"; };
 		C2F47CC8299417300055DD97 /* EmailFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFieldView.swift; sourceTree = "<group>"; };
 		C2F47CCA299418280055DD97 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
+		C2F882A129D191140062D2A7 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		C2F882A429D191730062D2A7 /* LoadableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableButton.swift; sourceTree = "<group>"; };
+		C2F882A829D19B0D0062D2A7 /* LoadableButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableButtonStyle.swift; sourceTree = "<group>"; };
+		C2F882AA29D19C640062D2A7 /* LoadableButtonStyle+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadableButtonStyle+Default.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +176,7 @@
 		C2B07B692992756C00ADF7B3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C2F882A029D191010062D2A7 /* Protocols */,
 				C2B07B77299296C700ADF7B3 /* Modifiers */,
 				C2B07B6A2992757700ADF7B3 /* UI */,
 				C2B07B5B2992708600ADF7B3 /* Resources */,
@@ -178,6 +187,7 @@
 		C2B07B6A2992757700ADF7B3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C2F882A329D191600062D2A7 /* LoadableButton */,
 				C23A977329BF2D880055B8C8 /* RoundedCorners */,
 				C2EA5DDF2993D99300019A5D /* InputFields */,
 			);
@@ -251,6 +261,24 @@
 				C2F47CCA299418280055DD97 /* PasswordField.swift */,
 			);
 			path = PasswordField;
+			sourceTree = "<group>";
+		};
+		C2F882A029D191010062D2A7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C2F882A129D191140062D2A7 /* Loadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C2F882A329D191600062D2A7 /* LoadableButton */ = {
+			isa = PBXGroup;
+			children = (
+				C2F882A429D191730062D2A7 /* LoadableButton.swift */,
+				C2F882A829D19B0D0062D2A7 /* LoadableButtonStyle.swift */,
+				C2F882AA29D19C640062D2A7 /* LoadableButtonStyle+Default.swift */,
+			);
+			path = LoadableButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,17 +363,21 @@
 				C2B07B6D29927AAC00ADF7B3 /* AuthView.swift in Sources */,
 				C2EA5DD5299398A100019A5D /* Router.swift in Sources */,
 				C2B07B79299296E200ADF7B3 /* AimatableFontModifier.swift in Sources */,
+				C2F882AB29D19C640062D2A7 /* LoadableButtonStyle+Default.swift in Sources */,
 				C2B07B7229927CD000ADF7B3 /* AppState.swift in Sources */,
+				C2F882A529D191730062D2A7 /* LoadableButton.swift in Sources */,
 				C2B07B68299274EB00ADF7B3 /* Strings.swift in Sources */,
 				C2EA5DD72993A2EE00019A5D /* RouterView.swift in Sources */,
 				C2EA5DE92993EA2A00019A5D /* InputIconModifier.swift in Sources */,
 				C2B07B66299274E200ADF7B3 /* Assets.swift in Sources */,
 				C2EA5DD32993983400019A5D /* Routes.swift in Sources */,
 				C2F47CCB299418280055DD97 /* PasswordField.swift in Sources */,
+				C2F882A229D191140062D2A7 /* Loadable.swift in Sources */,
 				C23A977529BF2DC20055B8C8 /* RoundedCorners.swift in Sources */,
 				C2B07B6F29927B5400ADF7B3 /* AuthVM.swift in Sources */,
 				C23A977729BF35EE0055B8C8 /* Person.swift in Sources */,
 				C23A977929BF40CF0055B8C8 /* AuthData.swift in Sources */,
+				C2F882A929D19B0D0062D2A7 /* LoadableButtonStyle.swift in Sources */,
 				C2F47CC9299417300055DD97 /* EmailFieldView.swift in Sources */,
 				C2B07B4D2992696D00ADF7B3 /* SchoolStoreApp.swift in Sources */,
 			);

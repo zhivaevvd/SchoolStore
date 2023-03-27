@@ -5,14 +5,17 @@
 
 import Foundation
 
-//public final class AppState: ObservableObject {
+// MARK: - UserDefault
+
+// public final class AppState: ObservableObject {
 //    @Published public var accessToken: String?
 //    @Published public var person: Person?
-//}
+// }
 
 @propertyWrapper
 public struct UserDefault<T: Codable> {
     public var key: String
+
     public var wrappedValue: T? {
         get {
             if let data = UserDefaults.standard.object(forKey: key) as? Data {
@@ -27,6 +30,8 @@ public struct UserDefault<T: Codable> {
         }
     }
 }
+
+// MARK: - AppState
 
 public class AppState: ObservableObject {
     @UserDefault(key: "accessToken") var accessToken: String?

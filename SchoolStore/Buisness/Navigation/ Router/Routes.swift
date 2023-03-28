@@ -8,6 +8,7 @@ import Foundation
 public enum Route: Identifiable, Hashable {
     case auth
     case tabBar
+    case productCard
 
     // MARK: Public
 
@@ -17,6 +18,8 @@ public enum Route: Identifiable, Hashable {
             return "auth"
         case .tabBar:
             return "tabbar"
+        case .productCard:
+            return "productCard"
         }
     }
 }

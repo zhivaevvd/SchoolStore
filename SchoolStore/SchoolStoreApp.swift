@@ -10,7 +10,6 @@ struct SchoolStoreApp: App {
     var body: some Scene {
         WindowGroup {
             RouterView()
-                .preferredColorScheme(.light)
         }
     }
 }

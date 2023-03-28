@@ -33,6 +33,13 @@ public enum L10n {
         )
     }
 
+    public enum Catalog {
+        /// Купить
+        public static let buy = L10n.tr("Localizable", "catalog.buy", fallback: "Купить")
+        /// Каталог
+        public static let title = L10n.tr("Localizable", "catalog.title", fallback: "Каталог")
+    }
+
     public enum FieldError {
         /// Минимум 5 символов
         public static let count = L10n.tr("Localizable", "fieldError.count", fallback: "Минимум 5 символов")
@@ -44,6 +51,11 @@ public enum L10n {
             "fieldError.wrongLoginOrPassword",
             fallback: "Неверный логин или пароль"
         )
+    }
+
+    public enum Profile {
+        /// Профиль
+        public static let title = L10n.tr("Localizable", "profile.title", fallback: "Профиль")
     }
 }
 

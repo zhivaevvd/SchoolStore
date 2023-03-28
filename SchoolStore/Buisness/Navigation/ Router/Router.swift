@@ -54,7 +54,15 @@ public final class Router: ObservableObject {
             let vm = AuthVM(router: self, appState: appState)
             AuthView(vm: vm)
         case .tabBar:
-            TabBar()
+            TabBar(router: self, appState: appState)
+        case .productCard:
+            NavigationBar(
+                config: .init(
+                    title: "productCard",
+                    displayType: .inline,
+                    contentView: ProductCardView()
+                )
+            )
         }
     }
 }

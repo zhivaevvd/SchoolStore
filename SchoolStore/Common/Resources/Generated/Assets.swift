@@ -34,6 +34,7 @@ public enum Asset {
     public static let fieldBacground = ColorAsset(name: "field.bacground")
     public static let fieldError = ColorAsset(name: "field.error")
     public static let navBlue = ColorAsset(name: "nav.blue")
+    public static let placeholderBackground = ColorAsset(name: "placeholderBackground")
     public static let separator = ColorAsset(name: "separator")
     public static let textPrimary = ColorAsset(name: "text.primary")
     public static let textSecondary = ColorAsset(name: "text.secondary")
@@ -44,6 +45,7 @@ public enum Asset {
     public static let itemAddToCart = ImageAsset(name: "item.addToCart")
     public static let itemPlaceholder = ImageAsset(name: "item.placeholder")
     public static let navBack = ImageAsset(name: "nav.back")
+    public static let blueLoader = ImageAsset(name: "blueLoader")
 }
 
 // MARK: - ColorAsset

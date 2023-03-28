@@ -15,3 +15,9 @@
 "fieldError.empty" = "Пустое поле";
 "fieldError.count" = "Минимум 5 символов";
 "fieldError.wrongLoginOrPassword" = "Неверный логин или пароль";
+
+"catalog.title" = "Каталог";
+"catalog.buy" = "Купить";
+
+
+"profile.title" = "Профиль";

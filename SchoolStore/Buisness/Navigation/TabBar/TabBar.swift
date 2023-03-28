@@ -7,27 +7,58 @@ import SwiftUI
 
 // MARK: - TabBar
 
-struct TabBar: View {
-    // MARK: Internal
+public struct TabBar: View {
+    // MARK: Lifecycle
 
-    var body: some View {
-        Text("title")
-            .onTapGesture {
-                appState.accessToken = nil
-                router.setRoot(route: .auth, appState: appState)
+    public init(router: Router, appState: AppState) {
+        self.router = router
+        self.appState = appState
+    }
+
+    // MARK: Public
+
+    public var body: some View {
+        TabView {
+            NavigationBar(
+                config: .init(
+                    title: L10n.Catalog.title,
+                    displayType: .largeTitle,
+                    contentView:
+                    CatalogView(vm: CatalogVM(router: router))
+                )
+            )
+            .tabItem {
+                Label(L10n.Catalog.title, systemImage: "cart")
             }
+
+            NavigationBar(
+                config: .init(
+                    title: L10n.Profile.title,
+                    displayType: .largeTitle,
+                    contentView:
+                    ProfileView()
+                        .onTapGesture {
+                            appState.accessToken = nil
+                            router.setRoot(route: .auth, appState: appState)
+                        }
+                )
+            )
+            .tabItem {
+                Label(L10n.Profile.title, systemImage: "person")
+            }
+        }
     }
 
     // MARK: Private
 
-    @EnvironmentObject private var router: Router
-    @EnvironmentObject private var appState: AppState
+    private let router: Router
+    private let appState: AppState
 }
 
 // MARK: - TabBar_Previews
 
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
-        TabBar()
+        TabBar(router: Router(), appState: AppState())
     }
 }

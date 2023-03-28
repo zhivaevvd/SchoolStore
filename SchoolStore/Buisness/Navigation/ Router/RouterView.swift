@@ -23,8 +23,6 @@ struct RouterView: View {
                     router.build(route: fullScreenSheet, appState: appState)
                 }
         }
-        .environmentObject(router)
-        .environmentObject(appState)
     }
 
     // MARK: Private

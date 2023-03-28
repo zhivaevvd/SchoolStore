@@ -40,7 +40,7 @@ public final class AuthVM: ObservableObject {
         isLoading = true
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
-            guard let self = self else { return }
+            guard let self else { return }
             self.isLoading = false
 
             self.auth {

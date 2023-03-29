@@ -26,6 +26,8 @@
 		C2EA5DD5299398A100019A5D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DD4299398A100019A5D /* Router.swift */; };
 		C2EA5DD72993A2EE00019A5D /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DD62993A2EE00019A5D /* RouterView.swift */; };
 		C2EA5DE92993EA2A00019A5D /* InputIconModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5DE82993EA2A00019A5D /* InputIconModifier.swift */; };
+		C2EF90A329D42D420026334A /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EF90A229D42D420026334A /* ScreenState.swift */; };
+		C2EF90A529D439240026334A /* CatalogItemsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EF90A429D439240026334A /* CatalogItemsMock.swift */; };
 		C2F4798929D3119500801C74 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F4798829D3119500801C74 /* NavigationBar.swift */; };
 		C2F4798B29D311D200801C74 /* NavigationBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F4798A29D311D200801C74 /* NavigationBarConfig.swift */; };
 		C2F4798E29D3213900801C74 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F4798D29D3213900801C74 /* ProductCardView.swift */; };
@@ -67,6 +69,8 @@
 		C2EA5DD4299398A100019A5D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C2EA5DD62993A2EE00019A5D /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		C2EA5DE82993EA2A00019A5D /* InputIconModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIconModifier.swift; sourceTree = "<group>"; };
+		C2EF90A229D42D420026334A /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
+		C2EF90A429D439240026334A /* CatalogItemsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemsMock.swift; sourceTree = "<group>"; };
 		C2F4798829D3119500801C74 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		C2F4798A29D311D200801C74 /* NavigationBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarConfig.swift; sourceTree = "<group>"; };
 		C2F4798D29D3213900801C74 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 			children = (
 				C2F882B929D1CA7F0062D2A7 /* Auth */,
 				C2F882B229D1C6EC0062D2A7 /* Catalog */,
+				C2EF90A229D42D420026334A /* ScreenState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				C2F882B329D1C70E0062D2A7 /* CatalogItem.swift */,
+				C2EF90A429D439240026334A /* CatalogItemsMock.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -494,8 +500,10 @@
 				C2B07B7229927CD000ADF7B3 /* AppState.swift in Sources */,
 				C2F882B429D1C70E0062D2A7 /* CatalogItem.swift in Sources */,
 				C2F882BC29D1CB8B0062D2A7 /* CatalogItemView.swift in Sources */,
+				C2EF90A529D439240026334A /* CatalogItemsMock.swift in Sources */,
 				C2F4798B29D311D200801C74 /* NavigationBarConfig.swift in Sources */,
 				C2F882A529D191730062D2A7 /* LoadableButton.swift in Sources */,
+				C2EF90A329D42D420026334A /* ScreenState.swift in Sources */,
 				C2B07B68299274EB00ADF7B3 /* Strings.swift in Sources */,
 				C2EA5DD72993A2EE00019A5D /* RouterView.swift in Sources */,
 				C2F4798929D3119500801C74 /* NavigationBar.swift in Sources */,

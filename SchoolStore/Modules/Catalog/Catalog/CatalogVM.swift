@@ -17,9 +17,7 @@ public final class CatalogVM: ObservableObject {
 
     @Published public var items: [CatalogItem] = []
 
-    @Published public var isLoading: Bool = false
-
-    @Published public var placeholderConfig: PlaceholderConfig?
+    @Published public var screenState: ScreenState = .showLoader
 
     public func onItemTap() {
         router.push(.productCard)
@@ -34,14 +32,19 @@ public final class CatalogVM: ObservableObject {
     private let router: Router
 
     private func fetchItems() {
-        isLoading = true
-
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
-            self?.isLoading = false
-            // self?.items = CatalogItem.mock
-            self?.placeholderConfig = PlaceholderDefault.emptyCatalog {
-                self?.fetchItems()
-            }
+            self?.screenState = .showPlaceholder(PlaceholderDefault.emptyCatalog {
+                self?.refresh()
+            })
+        }
+    }
+
+    private func refresh() {
+        screenState = .showLoader
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+            self?.items = CatalogItem.mock
+            self?.screenState = .showContent
         }
     }
 }

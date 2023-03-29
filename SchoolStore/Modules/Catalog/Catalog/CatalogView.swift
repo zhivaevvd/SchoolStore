@@ -17,32 +17,42 @@ public struct CatalogView: View {
     // MARK: Public
 
     public var body: some View {
-        if vm.isLoading {
-            Spacer()
-            LoaderView()
-        } else if let phConfig = vm.placeholderConfig {
-            PlaceholderView(config: phConfig)
-        } else {
-            List {
-                ForEach(vm.items, id: \.id) { model in
-                    CatalogItemView(model: model) {
-                        vm.onItemTap()
-                    } buyAction: {
-                        vm.buyDidTap()
-                    }
-                    .listRowSeparator(.hidden)
-                }
-            }
-            .scrollIndicators(.hidden)
-            .listStyle(.plain)
-            .buttonStyle(.plain)
-            .padding([.leading, .trailing], 16)
-        }
+        mainView
     }
 
     // MARK: Private
 
     @ObservedObject private var vm: CatalogVM
+
+    @ViewBuilder
+    private var mainView: some View {
+        switch vm.screenState {
+        case let .showPlaceholder(config):
+            PlaceholderView(config: config)
+        case .showLoader:
+            Spacer()
+            LoaderView()
+        case .showContent:
+            contentView
+        }
+    }
+
+    private var contentView: some View {
+        List {
+            ForEach(vm.items, id: \.id) { model in
+                CatalogItemView(model: model) {
+                    vm.onItemTap()
+                } buyAction: {
+                    vm.buyDidTap()
+                }
+                .listRowSeparator(.hidden)
+            }
+        }
+        .scrollIndicators(.hidden)
+        .listStyle(.plain)
+        .buttonStyle(.plain)
+        .padding([.leading, .trailing], 16)
+    }
 }
 
 // MARK: - CatalogView_Previews

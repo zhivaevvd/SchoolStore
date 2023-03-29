@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-public struct PlaceholderConfig {
+public struct PlaceholderConfig: Equatable {
     // MARK: Lifecycle
 
     public init(
@@ -29,4 +29,9 @@ public struct PlaceholderConfig {
     public let subtitle: String?
     public let buttonTitle: String?
     public let buttonAction: (() -> Void)?
+
+    public static func == (lhs: PlaceholderConfig, rhs: PlaceholderConfig) -> Bool {
+        lhs.title == rhs.title && lhs.subtitle == rhs.subtitle && lhs.buttonTitle == rhs.buttonTitle && lhs.icon == rhs
+            .icon
+    }
 }

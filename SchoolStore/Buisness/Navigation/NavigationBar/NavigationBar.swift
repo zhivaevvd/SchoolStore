@@ -66,7 +66,8 @@ public struct NavigationBar: View {
         Button {
             presentationMode.wrappedValue.dismiss()
         } label: {
-            Image(asset: Asset.navBack)
+            Image(systemName: "chevron.left")
+                .tint(Asset.white.swiftUIColor)
         }
         .padding(.bottom, 10)
     }

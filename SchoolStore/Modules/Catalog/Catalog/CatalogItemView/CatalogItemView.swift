@@ -84,7 +84,7 @@ struct CatalogItemView_Previews: PreviewProvider {
                 imageUrl: "https://s3-alpha-sig.figma.com/img/2703/f5de/847e2956c1c1dcdb5d1613758dd4750e?Expires=1681084800&Signature=nuu1WxdozhWCHgJNT82iO10rKXolx08mAiGY32-DLuS~NGTNvbU1Q3EzihVZh1fyHr72GJFn2BFAlwQfcQCfYdyYEjeJZgIv2S45Vr2zoU1bJ5VYqlfctfQBLyC7yDpIoa3vraT-1002uja9Cj65tRbrPDjM5BlRczFS7SVssBfD07xoDhXtZk17z3wWC3cSIIjs4pCRiLKW0H73iU3U2Wf8mebXjP84wzvpGDbYVjF-D8UCIoeJvY2~xPUxo9a5BRf0OGIS8XcvnfDwtACKs4tv1FEPau-kjvLpoGpM4AeQhDehnej7ahaOaswMdp4CT~zeEc5J1-6oEEyRpcnTFg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
                 name: "Futbolka",
                 city: "Saransk",
-                cost: 9000,
+                cost: "9 000 ₽",
                 id: "test"
             )
         )

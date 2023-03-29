@@ -47,6 +47,13 @@ public struct TabBar: View {
                 Label(L10n.Profile.title, systemImage: "person")
             }
         }
+        .onAppear {
+            let tabBarAppearance: UITabBarAppearance = .init()
+            tabBarAppearance.configureWithDefaultBackground()
+            tabBarAppearance.backgroundColor = .systemGray6
+            UITabBar.appearance().standardAppearance = tabBarAppearance
+            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        }
     }
 
     // MARK: Private

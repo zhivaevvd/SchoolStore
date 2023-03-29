@@ -40,13 +40,16 @@ public struct PlaceholderView: View {
                 .font(.headline)
                 .foregroundColor(Asset.textSecondary.swiftUIColor)
                 .fontWeight(.bold)
+                .multilineTextAlignment(.center)
 
             if let subtitle = config.subtitle {
                 Text(subtitle)
                     .font(.subheadline)
                     .foregroundColor(Asset.textSecondary.swiftUIColor)
+                    .multilineTextAlignment(.center)
             }
         }
+        .padding([.leading, .trailing], 32)
     }
 
     @ViewBuilder
@@ -62,7 +65,7 @@ public struct PlaceholderView: View {
 
                     Text(buttonTitle.uppercased())
                         .foregroundColor(Asset.white.swiftUIColor)
-                        .font(.subheadline)
+                        .font(.caption)
                         .fontWeight(.bold)
                 }
             }

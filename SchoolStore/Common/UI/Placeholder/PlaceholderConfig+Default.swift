@@ -9,9 +9,9 @@ public enum PlaceholderDefault {
     public static func emptyCatalog(_ buttonAction: (() -> Void)?) -> PlaceholderConfig {
         PlaceholderConfig(
             icon: Asset.imagePlaceholder.swiftUIImage,
-            title: "Oshibka",
-            subtitle: "dve stroki",
-            buttonTitle: "obnovit",
+            title: L10n.Catalog.Empty.title,
+            subtitle: L10n.Catalog.Empty.subtitle,
+            buttonTitle: L10n.Catalog.Empty.button.uppercased(),
             buttonAction: buttonAction
         )
     }

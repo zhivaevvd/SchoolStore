@@ -18,6 +18,8 @@
 
 "catalog.title" = "Каталог";
 "catalog.buy" = "Купить";
-
+"catalog.empty.title" = "На данный момент ничего нет";
+"catalog.empty.subtitle" = "Попробуйте обновить страницу или зайти позже";
+"catalog.empty.button" = "Обновить";
 
 "profile.title" = "Профиль";

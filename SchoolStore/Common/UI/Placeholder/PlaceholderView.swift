@@ -25,7 +25,9 @@ public struct PlaceholderView: View {
                     messageView
                     buttonView
                 }
+                .padding(.bottom, 100)
             }
+            .ignoresSafeArea()
     }
 
     // MARK: Private
